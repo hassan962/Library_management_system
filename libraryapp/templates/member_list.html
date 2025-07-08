@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% block content %}
+<h2>Members</h2>
+<a href="{% url 'member_add' %}" class="btn btn-primary mb-2">Add Member</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Debt</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for member in members %}
+    <tr>
+      <td>{{ member.name }}</td>
+      <td>{{ member.email }}</td>
+      <td>₹{{ member.outstanding_debt }}</td>
+      <td>
+        <a href="{% url 'member_update' member.id %}" class="btn btn-sm btn-warning">Edit</a>
+        <a href="{% url 'member_delete' member.id %}" class="btn btn-sm btn-danger">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

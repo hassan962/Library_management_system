@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% block content %}
+<h2>Transaction History</h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Book</th>
+      <th>Member</th>
+      <th>Issued On</th>
+      <th>Returned On</th>
+      <th>Rent Fee</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tx in transactions %}
+    <tr>
+      <td>{{ tx.book.title }}</td>
+      <td>{{ tx.member.name }}</td>
+      <td>{{ tx.issue_date }}</td>
+      <td>{{ tx.return_date|default:"Not Returned" }}</td>
+      <td>₹{{ tx.rent_fee }}</td>
+      <td>
+        {% if not tx.return_date %}
+          <a href="{% url 'return_book' tx.id %}" class="btn btn-sm btn-success">Return</a>
+        {% else %}
+          <span class="text-muted">Returned</span>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<a href="{% url 'book_list' %}" class="btn btn-secondary">Back to Books</a>
+{% endblock %}

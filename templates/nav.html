@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'book_list' %}">Library System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Books -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'book_list' %}">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'book_add' %}">Add Book</a>
+        </li>
+
+        <!-- Members -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'member_list' %}">Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'member_add' %}">Add Member</a>
+        </li>
+
+        <!-- Transactions -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'transaction_list' %}">Transactions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'issue_book' %}">Issue Book</a>
+        </li>
+
+        <!-- Utilities -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'import_books' %}">Import Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'search_books' %}">Search Books</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

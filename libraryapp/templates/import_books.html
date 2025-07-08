@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+<h2>Import Books from Frappe API</h2>
+<form method="post">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="page" class="form-label">Page Number</label>
+    <input type="number" name="page" id="page" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title (Optional)</label>
+    <input type="text" name="title" id="title" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-success">Import</button>
+  <a href="{% url 'book_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
