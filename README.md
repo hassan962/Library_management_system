@@ -1,10 +1,10 @@
-📚 Library Management System
+# 📚 Library Management System
 
 A Django-based web application that allows librarians to manage books, members, and transactions (issuing and returning books). It also integrates with the Frappe public API to import books.
 
 ---
 
-🚀 Features
+## 🚀 Features
 
 - ✅ CRUD operations for Books and Members
 - 📖 Issue and return books
@@ -12,9 +12,10 @@ A Django-based web application that allows librarians to manage books, members, 
 - 🔍 Search books by title or author
 - 🌐 Import books from [Frappe Library API](https://frappe.io/api/method/frappe-library)
 
+
 ---
 
-🧑‍💻 Tech Stack
+## 🧑‍💻 Tech Stack
 
 - **Backend**: Python, Django
 - **Frontend**: HTML, Bootstrap 5
@@ -25,10 +26,10 @@ A Django-based web application that allows librarians to manage books, members, 
 
 ## 🛠️ Setup Instructions
 
-
+```bash
 # Clone the repository
 git clone https://github.com/yourusername/Library_management_system.git
-cd Library_management_system
+cd library-management-system
 
 # Create a virtual environment and activate it
 python -m venv env
