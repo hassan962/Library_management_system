@@ -28,8 +28,8 @@ A Django-based web application that allows librarians to manage books, members, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Library_management_system.git
-cd library-management-system
+git clone https://github.com/hassan962/Library_management_system.git
+cd Library_management_system
 
 # Create a virtual environment and activate it
 python -m venv env
